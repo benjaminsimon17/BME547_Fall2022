@@ -12,4 +12,5 @@ The database will contain:
 * Patient Name
     + First Name
     + Last Name
-    + 
+* Age
+* Address
