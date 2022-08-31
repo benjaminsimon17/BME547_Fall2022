@@ -13,9 +13,10 @@ The database will contain:
     + First Name
     + Last Name
 * Age
-* Address
 * Zipcode
 * Blood type
 * Test Results
     1. HDL
     2. LDL
+    
+## Acknowledgements
