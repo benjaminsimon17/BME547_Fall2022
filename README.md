@@ -1,1 +1,3 @@
-# BME547_Fall2022
+# Patient Health Database
+
+Author: Benjamin Simon
