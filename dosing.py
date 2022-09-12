@@ -6,7 +6,7 @@
 """
 
 
-def dose_amount():
+def choose_diagnosis():
     print("Day One Dosing Guidelines")
     print("")
     print("Choose diagnosis:")
@@ -14,7 +14,10 @@ def dose_amount():
     print("2 - Acute bacterial sinusitis")
     print("3 - Community-acquired pneumonia")
     print("4 - Pharyngitis/tonsilitis")
-    diagnosis = int(input("Enter a number: "))
+
+    weight(int(input("Enter a number: ")))
+
+def weight(diagnosis):  
     print("PATIENT WEIGHT")
     print("Enter patient weight followed by units of kg or lb.")
     print("Examples:  65.3 lb      21.0 kg")
@@ -22,6 +25,10 @@ def dose_amount():
     weight_data = weight_input.split(" ")
     weight = float(weight_data[0])
     units = weight_data[1]
+    
+    calculate_dose(weight, units, diagnosis)
+    
+def calculate_dose(weight, units, diagnosis):
     if units == "lb":
         weight = weight / 2.205
     dosages_mg_per_kg = [30, 10, 10, 12]
@@ -34,5 +41,6 @@ def dose_amount():
 
 
 if __name__ == '__main__':
-    dose_amount()
+    choose_diagnosis()
+    
 
