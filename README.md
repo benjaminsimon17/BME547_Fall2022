@@ -13,10 +13,21 @@ The database will contain:
     + First Name
     + Last Name
 * Age
-* Zipcode
-* Blood type
+* Patient ID
 * Test Results
+        * Test name
+        * Test REsult
     1. HDL
     2. LDL
-    
+
+## Future improvements
+* Add blood type
+
+### Task
+Write a function that takes the 'db' variable as a parameter and prints out each patient information on a line, nicely formatted.
+
+Write a function that takes the database and a patient id, have the function look through the database and return the patient who matched the id.
+
+Write a function that takes databse, patient id, test name, and test value as parameters, and add those test results to the appropriate patient
+
 ## Acknowledgements
