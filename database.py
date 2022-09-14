@@ -30,6 +30,14 @@ def main():
     test_result_adder(db,3,"HDL",100)
     print(find_patient(db,3))
     
+    room_list = ['Room 1','Room 2','Room 3']
+    
+    for i,patient in enumerate(db):
+        # print(i)
+        print("Name = {}, Room = {}".format(patient[0], room_list[i]))
+    
+    for patient, room in zip(db, room_list):
+        print("Name = {}, Room = {}".format(patient[0], room))
     
 if __name__ == '__main__':
     main()
