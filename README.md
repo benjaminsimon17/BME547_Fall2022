@@ -28,6 +28,6 @@ Write a function that takes the 'db' variable as a parameter and prints out each
 
 Write a function that takes the database and a patient id, have the function look through the database and return the patient who matched the id.
 
-Write a function that takes databse, patient id, test name, and test value as parameters, and add those test results to the appropriate patient
+Write a function that takes database, patient id, test name, and test value as parameters, and add those test results to the appropriate patient
 
 ## Acknowledgements
