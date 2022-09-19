@@ -83,5 +83,5 @@ def output_chol_result(chol_value, charac):
 
 
 
-
-interface()
+if __name__ == '__main__':
+    interface()
