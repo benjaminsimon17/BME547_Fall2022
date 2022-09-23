@@ -14,10 +14,10 @@ def choose_diagnosis():
     print("2 - Acute bacterial sinusitis")
     print("3 - Community-acquired pneumonia")
     print("4 - Pharyngitis/tonsilitis")
-
     weight(int(input("Enter a number: ")))
 
-def weight(diagnosis):  
+
+def weight(diagnosis):
     print("PATIENT WEIGHT")
     print("Enter patient weight followed by units of kg or lb.")
     print("Examples:  65.3 lb      21.0 kg")
@@ -25,9 +25,9 @@ def weight(diagnosis):
     weight_data = weight_input.split(" ")
     weight = float(weight_data[0])
     units = weight_data[1]
-    
     calculate_dose(weight, units, diagnosis)
-    
+
+
 def calculate_dose(weight, units, diagnosis):
     if units == "lb":
         weight = weight / 2.205
@@ -42,5 +42,3 @@ def calculate_dose(weight, units, diagnosis):
 
 if __name__ == '__main__':
     choose_diagnosis()
-    
-
