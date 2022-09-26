@@ -1,15 +1,27 @@
 from socketserver import ThreadingUnixStreamServer
 
 
+class Patient:
+    def __init__(self):
+        self.first_name = ""
+        self.last_name = ""
+        self.patient_id = ""
+        self.age = ""
+        self.tests = []
+
+    def full_name(self):
+        return "{} {}".format(self.first_name, self.last_name)
+
+
 def create_patient_entry(patient_first_name,
                          patient_last_name,
                          patient_id,
                          patient_age):
-    new_patient = {"First Name": patient_first_name,
-                   "Last Name": patient_last_name,
-                   "ID": patient_id,
-                   "Age": patient_age,
-                   "Tests": []}
+    new_patient = Patient()
+    new_patient.first_name = patient_first_name
+    new_patient.last_name = patient_last_name
+    new_patient.patient_id = patient_id
+    new_patient.age = patient_age
     return new_patient
 
 
@@ -22,7 +34,7 @@ def print_database(db):
 
 
 def get_full_name(patient):
-    return patient["First Name"] + " " + patient["Last Name"]
+    return patient.full_name()
 
 
 def test_result_adder(db, id_number, test_name, test_value):
@@ -45,6 +57,16 @@ def find_patient(db, id_number):
 
 
 def main():
+    x = Patient()
+    x.first_name = "Benjamin"
+    x.last_name = "Simon"
+    print(x.last_name)
+
+    y = Patient()
+    y.first_name = "Edawrd"
+    y.last_name = "Smith"
+    print(y.last_name)
+    exit()
     db = {}
     db[11] = create_patient_entry("Ann", "Ables", 11, 30)
     db[22] = create_patient_entry("Bob", "Boyles", 22, 34)
