@@ -16,8 +16,9 @@ def create_patient_entry(patient_first_name,
 def print_database(db):
     for patient in db:
         print(patient)
-        print("Name: {}, id: {}, age: {}".
-              format(get_full_name(db[patient]), db[patient]["ID"], db[patient]["Age"]))
+        print("Name: {}, id: {}, age: {}".format(get_full_name(db[patient]),
+                                                 db[patient]["ID"],
+                                                 db[patient]["Age"]))
 
 
 def get_full_name(patient):
