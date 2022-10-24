@@ -35,6 +35,12 @@ def hdl_check_from_internet():
     return answer
 
 
+@app.route("/add/<a>/<b>", methods=["GET"])
+def add_variable_url(a, b):
+    answer = int(a) + int(b)
+    return jsonify(answer)
+
+
 @app.route("/add_numbers", methods=["POST"])
 def add_numbers():
     in_data = request.get_json()
